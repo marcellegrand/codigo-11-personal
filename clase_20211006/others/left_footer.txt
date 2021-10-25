@@ -1,0 +1,16 @@
+height: 18px;
+width: 227px;
+left: 30px;
+top: 836px;
+border-radius: nullpx;
+
+font-family: Arial;
+font-size: 12px;
+font-style: normal;
+font-weight: 700;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+
+background: #2400FF;
+

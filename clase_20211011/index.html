@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores: Seudo elementos</title>
+    <style>
+        p::first-letter {
+            font-size: 40px;
+        }
+
+        p::first-line {
+            background: red;
+        }
+
+        p::after {
+            content: "  '  ";
+        }
+
+        p:before {
+            content: "  '  ";
+        }
+
+        *::selection {
+            background: blue;
+        }
+
+        ul li:first-child {
+            background: green;
+        }
+
+        ul li:last-child {
+            background: yellow;
+        }
+
+        ul li:nth-child(even) {
+            background: turquoise;
+        }
+
+        ul li:nth-child(odd) {
+            background: red;
+        }
+
+        table {
+            width: 100%;
+            border-collapse:separate;
+            border: 2px solid red;
+            line-height: 20px;
+            column-width: 20px;
+        }
+
+        table tr:nth-child(even) {
+            background: black;
+            color: white;
+        }
+
+        table td:nth-child(even) {
+            background: black;
+            color: white;
+        }
+
+        div div:nth-child(2n+1) {
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, maxime ipsa nostrum, tempora obcaecati impedit quasi dolores eos soluta facere ut labore magnam quod odio, vitae fuga iusto dignissimos quis? Recusandae modi fuga molestiae? Illum provident totam ipsum qui nisi, repellat beatae itaque atque hic, cumque fugit excepturi eaque ipsam!
+        </p>
+        <ul>
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+            <li>Cuatro</li>
+            <li>Cinco</li>
+            <li>Seis</li>
+            <li>Siete</li>
+            <li>Ocho</li>
+            <li>Nueve</li>
+            <li>Diez</li>
+        </ul>
+        <table>
+            <tr>
+                <td>1.1</td>
+                <td>1.2</td>
+                <td>1.3</td>
+                <td>1.4</td>
+                <td>1.5</td>
+                <td>1.6</td>
+                <td>1.7</td>
+                <td>1.8</td>
+            </tr>
+            <tr>
+                <td>2.1</td>
+                <td>2.2</td>
+                <td>2.3</td>
+                <td>2.4</td>
+                <td>2.5</td>
+                <td>2.6</td>
+                <td>2.7</td>
+                <td>2.8</td>
+            </tr>
+            <tr>
+                <td>3.1</td>
+                <td>3.2</td>
+                <td>3.3</td>
+                <td>3.4</td>
+                <td>3.5</td>
+                <td>3.6</td>
+                <td>3.7</td>
+                <td>3.8</td>
+            </tr>
+            <tr>
+                <td>4.1</td>
+                <td>4.2</td>
+                <td>4.3</td>
+                <td>4.4</td>
+                <td>4.5</td>
+                <td>4.6</td>
+                <td>4.7</td>
+                <td>4.8</td>
+
+            </tr>
+            <tr>
+                <td>5.1</td>
+                <td>5.2</td>
+                <td>5.3</td>
+                <td>5.4</td>
+                <td>5.5</td>
+                <td>5.6</td>
+                <td>5.7</td>
+                <td>5.8</td>
+            </tr>
+            <tr>
+                <td>6.1</td>
+                <td>6.2</td>
+                <td>6.3</td>
+                <td>6.4</td>
+                <td>6.5</td>
+                <td>6.6</td>
+                <td>6.7</td>
+                <td>6.8</td>
+            </tr>
+            <tr>
+                <td>7.1</td>
+                <td>7.2</td>
+                <td>7.3</td>
+                <td>7.4</td>
+                <td>7.5</td>
+                <td>7.6</td>
+                <td>7.7</td>
+                <td>7.8</td>
+            </tr>
+            <tr>
+                <td>8.1</td>
+                <td>8.2</td>
+                <td>8.3</td>
+                <td>8.4</td>
+                <td>8.5</td>
+                <td>8.6</td>
+                <td>8.7</td>
+                <td>8.8</td>
+            </tr>
+        </table>
+        <div>
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+            <div>Five</div>
+            <div>Six</div>
+            <div>Seven</div>
+            <div>Eigth</div>
+            <div>Nine</div>
+            <div>Ten</div>
+        </div>
+
+        <style>
+            ul>li {
+                border-top: 5px solid greenyellow;
+            }
+        </style>
+        <ul>
+            <li>Unordered 01</li>
+            <li>Unordered 02</li>
+            <li>Unordered 03
+                <ol>
+                    <li>Item 01</li>
+                    <li>Item 02</li>
+                    <li>Item 03</li>
+                </ol>
+            </li>
+            <li>Unordered 04</li>
+            <li>Unordered 05</li>
+        </ul>
+        
+        <style>
+            h2+p {
+                color: yellow;
+            }
+        </style>
+        <h2>TITULO H2</h2>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <hr>
+        <h2>TITULO H2</h2>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <style>
+            h3~p {
+                color: white;
+            }
+        </style>
+        <h3>TITULO H3</h3>
+        <p>Lorem, ipsum.</p>
+        <p>Lorem, ipsum dolor.</p>
+        <p>Lorem ipsum dolor sit.</p>
+        <hr>
+        <h3>TITULO H3</h3>
+        <p>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <P>Lorem ipsum dolor sit amet consectetur.</P>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

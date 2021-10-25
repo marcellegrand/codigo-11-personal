@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALINEACIONES</title>
+    <style>
+        .grid {
+            display: grid;
+            /*
+                1fr es una parte fraccionaria en la que se dividirá el ancho disponible.
+                En nuestro ejemplo tenemos el espacio disponible en 5 partes iguales,
+                pero solo la última columna medirá el doble de fracción
+            */
+            grid-template-columns: repeat(3, 1fr) 2fr;
+            gap: 20px;
+            background: pink;
+        }
+
+        /*ALINEACIÓN HORIZONTAL*/
+        .justify-items {
+            justify-items: stretch;
+            /*justify-items: center;*/
+            /*justify-items: start;*/
+            /*justify-items: end;*/
+        }
+
+        /*ALINEACIÓN VERTICAL*/
+        .align-items {
+            align-items: stretch;
+            /*align-items: start;*/
+            /*align-items: end;*/
+            height: 200px;
+        }
+
+        .justify-content {
+            grid-template-columns: repeat(4,100px);
+            justify-content: stretch;
+            /*justify-content:space-around;*/
+            /*justify-content:space-between;*/
+            /*justify-content: center;*/
+            /*justify-content: end;*/
+            /*justify-content: start;*/
+        }
+
+        .align-content {
+            align-content: stretch;
+            /*align-content: space-around;*/
+            /*align-content: space-between;*/
+            /*align-content: center;*/
+            /*align-content: start;*/
+            /*align-content: end;*/
+            height: 200px;
+        }
+
+        .justify-self div:first-child {
+            justify-self: center;
+            /*justify-self: start;*/
+            /*justify-self: end;*/
+            /*justify-self: stretch;*/
+        }
+
+        .align-self {
+            height: 200px;
+        }
+
+        .align-self div:first-child {
+            align-self: center;
+            /*align-self: start;*/
+            /*align-self: end;*/
+            /*align-self: stretch;*/
+        }
+
+        .grid div:nth-child(even) {
+            background-color: red;
+        }
+
+        .grid div:nth-child(odd) {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>JUSTIFY ITEMS</h2>
+    <div class="grid justify-items">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <h2>ALIGN ITEMS</h2>
+    <div class="grid align-items">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <h2>JUSTIFY CONTENT</h2>
+    <div class="grid justify-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <h2>ALIGN CONTENT</h2>
+    <div class="grid align-content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <h2>JUSTIFY SELF</h2>
+    <div class="grid justify-self">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <h2>ALIGN SELF</h2>
+    <div class="grid align-self">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+
+</body>
+</html>

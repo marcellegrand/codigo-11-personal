@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSICIONAMIENTO</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .pos {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-row: 300px 300px;
+            gap: 20px;
+        }
+
+        .pos img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /*
+            Los valores dados en grid-column y grid-row referencian a las líneas verticales y horizontales de la cuadrícula, no a las filas o columnas propiamente dichas (salvo la propiedad span que sí se refiere a ellas). Es decir, si se tiene un tabla de 2 x 3, es decir, de 2 filas por 3 columnas, en ella habrá un total de 3 líneas horizontales por 4 líneas verticales. Se puede aplicar la fórmula siguiente: rows x cols -> (rows + 1) líneas horizontales y (cols + 1) líneas verticales
+        */
+        .pos div:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 3; /*grid-column-end: span 2;*/
+            /*
+                Ciento por ciento equivalente a lo anterior:
+                grid-column: 1/3;
+                grid-column: 1/span 2;
+            */
+            grid-row-start: 1;
+            grid-row-end: 3; /*grid-row-end: span 3;*/
+            /*
+                Ciento por ciento equivalente a lo anterior:
+                grid-row: 1/3;
+                grid-row: 1/span 2;
+            */
+
+            /*
+                También pudo usarse grid-area:
+                grid-row-start / grid-column-start / grid-row-end / grid-column-end
+                grid-area: 1 / 1 / 3 / 3
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="pos">
+        <div><img src="https://picsum.photos/200/300?random=1" alt="1"></div>
+        <div><img src="https://picsum.photos/200/300?random=2" alt="2"></div>
+        <div><img src="https://picsum.photos/200/300?random=3" alt="3"></div>
+        <div><img src="https://picsum.photos/200/300?random=4" alt="4"></div>
+        <div><img src="https://picsum.photos/200/300?random=5" alt="5"></div>
+        <div><img src="https://picsum.photos/200/300?random=6" alt="6"></div>
+        <div><img src="https://picsum.photos/200/300?random=7" alt="7"></div>
+        <div><img src="https://picsum.photos/200/300?random=8" alt="8"></div>
+        <div><img src="https://picsum.photos/200/300?random=9" alt="9"></div>
+        <div><img src="https://picsum.photos/200/300?random=10" alt="10"></div>
+    </div>
+</body>
+</html>

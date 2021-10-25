@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        h2 {
+            margin-top: 10px;
+        }
+
+        h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .flex {
+            display: flex;
+            border: 1px solid orange;
+            margin-bottom: 10px;
+        }
+
+        .flex-horizontal {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+        }
+
+        .flex-vertical {
+            width: 400px;
+            height: 400px;
+            background-color: brown;
+        }
+        
+        /*CAMBIAR LA DIRECCION DE LOS EJES*/
+        .flex-row {
+            flex-direction: row;
+            /*
+            flex-direction: column-reverse;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            */
+        }
+        .flex-column {
+            flex-direction: column;
+            /*
+            flex-direction: column-reverse;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            */
+        }
+
+        .flex div:nth-child(odd) {
+            background-color: red;
+        }
+        .flex div:nth-child(even) {
+            background-color: yellow;
+        }
+        
+        /*ALINEACIÓN HORIZONTAL*/
+        .justify-content-flex-start {
+            justify-content: flex-start;
+        }
+        .justify-content-flex-end {
+            justify-content: flex-end;
+        }
+        .justify-content-space-between {
+            justify-content:space-between;
+        }
+        .justify-content-space-around {
+            justify-content:space-around;
+        }
+        .justify-content-space-evenly {
+            justify-content:space-evenly;
+        }
+
+        /*ALINEACIÓN VERTICAL*/
+        .align-items-flex-start {
+            align-items: flex-start;
+        }
+        .align-items-flex-end {
+            align-items: flex-end;
+        }
+        .align-items-center {
+            align-items: center;
+        }
+        .align-items-stretch {
+            align-items: stretch;
+        }
+        .align-items-baseline {
+            align-items: baseline;
+        }
+
+        /*ALINEACIÓN PROPIA*/
+        .align-self-flex-start {
+            align-self: flex-start;
+        }
+        .align-self-flex-end {
+            align-self: flex-end;
+        }
+        .align-self-stretch {
+            align-self: stretch;
+        }
+        .align-self-center {
+            align-self: center;
+        }
+        .align-self-baseline {
+            align-self: baseline;
+        }
+</style>
+</head>
+<body>
+    <h2>JUSTIFY CONTENT</h2>
+    <hr>
+    <h3>flex-start</h3>    
+    <div class="flex flex-row flex-horizontal justify-content-flex-start">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+    <h3>flex-end</h3>    
+    <div class="flex flex-row flex-horizontal justify-content-flex-end">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+    <h3>space-between</h3>    
+    <div class="flex flex-row flex-horizontal justify-content-space-between">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+    <h3>space-around</h3>    
+    <div class="flex flex-row flex-horizontal justify-content-space-around">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+    <h3>space-evenly</h3>    
+    <div class="flex flex-row flex-horizontal justify-content-space-evenly">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+
+    <h2>ALIGN ITEMS</h2>
+    <hr>
+    <h3>flex-start</h3>    
+    <div class="flex flex-column flex-vertical align-items-flex-start">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+    <h3>flex-end</h3>    
+    <div class="flex flex-column flex-vertical align-items-flex-end">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+    <h3>center</h3>    
+    <div class="flex flex-column flex-vertical align-items-center">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+    <h3>stretch</h3>    
+    <div class="flex flex-column flex-vertical align-items-stretch">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+    <h3>baseline</h3>    
+    <div class="flex flex-column flex-vertical align-items-baseline">
+        <div>LEFT</div>
+        <div>RIGTH</div>
+    </div>
+
+    <h2>ALIGN SELF</h2>
+    <hr>
+    <div class="flex flex-vertical">
+        <div class="align-self-flex-start">FLEX START</div>
+        <div class="align-self-flex-end">FLEX END</div>
+        <div class="align-self-stretch">STRETCH</div>
+        <div class="align-self-center">CENTER</div>
+        <div class="align-self-baseline">BASELINE</div>
+    </div>                
+</body>
+</html>

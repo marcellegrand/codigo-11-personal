@@ -1,0 +1,71 @@
+.number {
+    border: none;
+    background-color: #382ae1;
+    color: yellow;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.operator {
+    border: none;
+    background-color:red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.zero {
+    border: none;
+    background-color: #382ae1;
+    color: yellow;
+    width: 178px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.equal {
+    border: none;
+    background-color: green;
+    color: black;
+    width: 240px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-weight: bolder;
+    font-size: large;    
+}
+
+.screen {
+    border-radius: 10px;
+    background-color: turquoise;
+    width: 220px;
+    height: 50px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 40px;
+    text-align: right;
+}
+
+.main_container {
+    width: 280px;
+}

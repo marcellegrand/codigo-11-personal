@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIDADES RELATIVAS</title>
+    <style>
+        html {
+            font-size: 62.50%; 
+            /*
+                62.50% del tamaño de la configuración del navegador
+                Si el navegador estuviera configurado con tamaño de 16px,
+                acá tendríamos un tamaño de 10px, aproximadamente (16 * 62.50%)
+            */
+        }
+        body {
+            font-size: 1.3rem; 
+            /*130% del tamaño de la configuración del html*/
+        }
+        h1 {
+            font-size: 3rem; 
+            /*3 veces el tamaño de la configuración del html*/
+        }
+        h1 span {
+            font-size: 0.33em; 
+            /*33% del tamaño de padre; en este caso del h1*/
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        h4 {
+            font-size: 1.5rem;
+        }
+        h5 {
+            font-size: 1rem;
+        }
+        h6 {
+            font-size: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        .main-container {
+            width: 100vw; /*Viewport width*/
+            height: 100vh; /*Viewport height*/
+            margin: auto auto;
+            background: pink;
+        }
+    </style>
+    <div class="main-container">
+    <main>
+        <h1>
+            TITULO
+            <span>TEXTO MAS PEQUEÑO</span>
+        </h1>
+    </main>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, ab ipsa? Est repellendus hic dolores ut, porro quae officiis numquam voluptatum, perferendis dignissimos placeat odio fuga, incidunt suscipit nulla quibusdam!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, ab ipsa? Est repellendus hic dolores ut, porro quae officiis numquam voluptatum, perferendis dignissimos placeat odio fuga, incidunt suscipit nulla quibusdam!
+    </p>
+    <h2>Título 2</h2>
+    <h3>Título 3</h3>
+    <h4>Título 4</h4>
+    <h5>Título 5</h5>
+    <h6>Título 6</h6>
+
+    <style>
+        .outer-box {
+            width: 100%;
+            background: green;
+        }
+        .inner-box {
+            width: 50%;
+            background: turquoise;
+        }
+        .inner-box div {
+            width: 25%;
+            background: yellow;
+        }
+    </style>
+    <div class="outer-box">
+        <p>OUTER BOX</p>
+        <div class ="inner-box">
+            <p>INNER BOX</p>
+            <div>
+                <p>MINIMAL BOX</p>
+            </div>            
+        </div>
+
+    </div>
+    </div>
+</body>
+</html>

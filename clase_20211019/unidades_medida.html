@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIDADES MEDIDA</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-gap: 10px;
+        }
+
+        .grid-auto-fill {
+            /*
+                Si el contenedor de cuadrícula tiene un tamaño definido o máximo en el eje relevante, entonces el número de repeticiones es el mayor entero positivo posible que no hace que la cuadrícula desborde su contenedor de cuadrícula. 
+            */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+
+        .grid-auto-fit {
+            /*
+                Se comporta igual que el autocompletado auto-fill, excepto que después de colocar los elementos de la cuadrícula se colapsan las pistas vacías repetidas. Una pista vacía es aquella sin elementos de cuadrícula colocados o que se extienden a través de ella. 
+            */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .grid div:nth-child(even) {
+            background: red;
+        }
+
+        .grid div:nth-child(odd) {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div clas="container">
+    <h2>AUTO-FIT</h2>
+    <div class="grid grid-auto-fit">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <h2>AUTO-FIll</h2>
+    <div class="grid grid-auto-fill">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+</div>
+</body>
+</html>

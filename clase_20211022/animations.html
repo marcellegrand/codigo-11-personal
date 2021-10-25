@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATIONS</title>
+    <style>
+        p {
+            animation-name: animationSample;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animationSample {
+            0% {
+                font-size: 0px;
+                color: red;
+            }
+            25% {
+                font-size: 10px;
+                color: blue;
+            }
+            50% {
+                font-size: 20px;
+                color: green;
+            }
+            75% {
+                font-size: 30px;
+                color: yellow;
+            }
+            100% {
+                font-size: 40px;
+                color: brown;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem et blanditiis pariatur est perspiciatis mollitia aliquid laborum laboriosam, necessitatibus ducimus quis nemo nostrum, error reprehenderit. Distinctio ullam tempore perferendis voluptatem.
+        </p>
+
+        <style>
+            div {
+                width: 100px;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            .like {
+                display: block;
+                width: 110px;
+                height: 110px;
+                margin: 0 auto;
+                background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/349115/like_animation.png') 0 0 no-repeat;
+                background-size: 3000%;
+                animation-name: like-gif;
+                animation-duration: 1s; 
+                animation-iteration-count: infinite;
+                animation-timing-function: steps(28);
+            }
+    
+            @keyframes like-gif {
+                0% {
+                    background-position: 0%;
+                }
+    
+                100% {
+                    background-position: 100%;
+                }
+            }
+        </style>
+        <div class="like">
+
+        </div>
+    </main>
+</body>
+</html>

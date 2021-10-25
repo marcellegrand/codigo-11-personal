@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSFORM</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            background: orange;
+            color: blue;
+        }
+
+        .box:hover.translate {
+            transform:translate(10px,10px);
+        }
+        .box:hover.translate-x {
+            transform:translateX(10px);
+        }
+        .box:hover.translate-y {
+            transform:translateY(10px);
+        }
+        .box:hover.rotate {
+            transform:rotate(90deg);
+        }
+        .box:hover.rotate-x {
+            transform:rotateX();
+        }
+        .box:hover.rotate-y {
+            transform:rotatey();
+        }
+</style>
+</head>
+<body>
+    <div class="box translate">TRANSLATE</div>
+    <div class="box translate-x">TRANSLATE X</div>
+    <div class="box translate-y">TRANSLATE Y</div>
+    <div class="box rotate">ROTATE</div>
+    <div class="box rotate-x">ROTATE X</div>
+    <div class="box rotate-y">ROTATE Y</div>
+    <div class="box skew">SKEW</div>
+    <div class="box skew-x">SKEW X</div>
+    <div class="box skew-y">SKEW Y</div>
+    <div class="box scale">SCALE</div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALIGN CONTENT</title>
+    <style>
+        .box {
+            display: flex;
+            width: 400px;
+            height: 400px;
+            background: pink;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+
+        .box div {
+            width: 50%;
+        }
+
+        .box div:nth-child(even) {
+            background: orange;
+        }
+
+        .box div:nth-child(odd) {
+            background: green;
+        }
+
+        .align-content-flex-start {
+            align-content: flex-start;
+        }
+
+        .align-content-flex-end {
+            align-content: flex-end;
+        }
+
+        .align-content-space-between {
+            align-content: space-between;
+        }
+
+        .align-content-space-around {
+            align-content: space-around;
+        }
+
+        .align-content-center {
+            align-content: center;
+        }
+
+        .align-content-stretch {
+            align-content: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="box align-content-flex-start">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+    </div>
+    <div class="box align-content-flex-end">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+    </div>
+    <div class="box align-content-space-between">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+    </div>
+    <div class="box align-content-flex-around">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+    </div>
+    <div class="box align-content-center">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+    </div>
+    <div class="box align-content-stretch">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/349115/like_animation.png

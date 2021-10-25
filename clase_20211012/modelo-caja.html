@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODELO DE CAJA</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /*
+                La caja tendrá el tamaño definido por el ancho de la caja.
+                Ni el margin, ni el padding, ni el border sumarán a su dimensión
+            */
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            width: 800px;
+            height: 200px;
+            margin: auto;
+            
+            /*
+            padding-top: 10px;
+            padding-right: 15px;
+            padding-bottom: 20px;
+            padding-left: 25px;
+            */
+            padding: 10px 15px 20px 25px; /*Sentido horario*/
+            /*Un solo valor para todo*/
+            /*
+                padding: 5px; 
+            */
+            
+            /*
+            margin-top: 10px;
+            margin-right: 15px;
+            margin-bottom: 20px;
+            margin-left: 25px;
+            */
+            /*margin: 10px 15px 20px 25px;*/ /*Sentido horario*/
+            margin: 20px auto;
+
+            border-width: 10px;
+            border-style: double;
+            border-color: orange;
+            /*border: 10px solid orange;*/
+            
+            overflow-x: auto;
+            overflow-y: auto;
+
+            background-image: url('./images/mario_and_luigi.png');
+            background-repeat: no-repeat;
+            background-color: red;
+            background-position: center center;
+        }
+
+        h1 {
+            display: block;
+            width: 1000px;
+            text-align: center;
+            visibility: visible;
+        }
+
+        a {
+            display: none;
+            /*
+                inline: La caja tendrá el ancho el mismo que tenga el texto
+                block: La caja tendrá el ancho definido por el width
+                none: No se muestra el objeto como caja
+            */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>TITULO</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta iste voluptatibus illo quo voluptatum quasi commodi, laudantium enim itaque blanditiis!
+        </p>
+        <div>
+            <h2>TITULO 2</h2>
+            <p>Two words</p>
+            <p>Two words</p>
+            <p>Two words</p>
+            <p>Two words</p>
+            <p>Two words</p>
+            <p>Two words</p>
+            <p>Two words</p>
+            <p>Two words</p>
+            <p>Two words</p>
+            <p>Two words</p>
+            <a href="">Link 01</a>
+            <a href="">Link 02</a>
+        </div>
+        <div>
+            <h2>TITULO 2</h2>
+            <p>Three words, please</p>
+            <a href="">Link 03</a>
+            <a href="">Link 04</a>
+        </div>        
+    </div>
+    <div class="wrapper">
+        <h1>TITULO</h1>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta iste voluptatibus illo quo voluptatum quasi commodi, laudantium enim itaque blanditiis!
+        </p>
+        <div>
+            <h2>TITULO 2</h2>
+            <p>Two words</p>
+            <a href="">Link 01</a>
+            <a href="">Link 02</a>
+        </div>
+        <div>
+            <h2>TITULO 2</h2>
+            <p>Three words, please</p>
+            <a href="">Link 03</a>
+            <a href="">Link 04</a>
+        </div>        
+    </div>
+</body>
+</html>

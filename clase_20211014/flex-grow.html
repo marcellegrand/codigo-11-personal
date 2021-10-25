@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX GROW</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header,
+        footer {
+            background: greenyellow;
+            padding: 20px;
+        }
+
+        main {
+            /*
+                Para pedirle que CREZCA todo el espacio disponible de su cotenedor
+                El crecimiento se da en la unidad dada como flex-grow
+            */
+            flex-grow: 1;
+            background: violet;
+            display: flex;
+        }
+
+        aside {
+            background: red;
+            width: 150px;
+        }
+
+        /*Solo se aplica al primer hijo SECTION de MAIN*/
+        main>section {
+            background: turquoise;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <header>
+        HEADER
+    </header>
+    <main>  
+        <aside>
+            ASIDE
+        </aside> 
+        <section>     
+            MAIN CONTENT
+        </section>
+    </main>
+    <footer>
+        FOOTER
+    </footer>
+    </div>
+</body>
+</html>

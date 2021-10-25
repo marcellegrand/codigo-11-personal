@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <!--
+    ¡¡PRIMERA FORMA DE AGREGAR ESTILOS!!
+    Se pueden usar TODAS LAS FORMAS que se hacen en el *.css
+    -->
+    <!--
+    <style>
+        body {
+            background: gray;
+        }
+
+        div {
+            padding: 20px;
+            margin: 20px;
+            background: turquoise;
+        }
+
+        h2 {
+            color: blue;
+            font-family: arial;
+        }
+    </style>
+    -->
+    <!--
+    ¡¡TERCERA FORMA DE AGREGAR ESTILOS!!
+    La más recomendada, pues se trabaja de forma modular    
+    -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/main.css">   
+</head>
+<body>
+    <!--Etiquetas ordenadas-->
+    <!--
+    <ul>
+        <li>Listas de elementos del mismo tipo</li>
+        <li>Listas de elementos del mismo tipo</li>
+    </ul>
+    -->
+    <!--Etiquetas desordenadas-->
+    <!--
+    <ol>
+        <li>Listas de elementos del mismo tipo</li>
+        <li>Listas de elementos del mismo tipo</li>
+    </ol>
+    -->
+    <!--
+    <dl>
+        <dt>Title</dt>
+        <dd>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique placeat officia repellendus quae autem minima at facilis et eligendi, modi possimus temporibus quis totam eius praesentium asperiores tempora repudiandae minus?
+        </dd>
+    </dl>
+    <blockquote>Contenido con sangría</blockquote>
+    -->
+    <header>
+        <a class="header-logo" href="">CodiGO</a>
+        <nav>
+            <div class="enlaces">
+            <ul>
+                <li><a href="">Quién soy</a></li>
+                <li><a href="">My Skills</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Clientes</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <!--
+            ¡¡SEGUNDA FORMA DE AGREGAR ESTILOS!!
+            Se pueden usar TODAS LAS FORMAS que se hacen en el *.css    
+            -->            
+            <h1 style="background: red; font-weight: bolder;">codiGO</h1>
+            <h2>Hola, mi nombre es
+                Marcel Lazo de la Vega
+            </h2>
+            <img src="./images/portafolio.png" alt="Imagen de portafolio">
+        </section>
+        <section>
+            <h2>My skills</h2>
+            <div>
+                <div>
+                    <h3>html</h3>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <h3>javascript</h3>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <h3>css</h3>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <h3>react</h3>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <h3>angular</h3>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <h3>python</h3>
+                    <div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>My personal information</h2>
+            <form method="post">
+
+                <div>
+                    <h2>Nombre</h2>
+                    <input name ="name" type="text"/>
+                </div>
+                <hr>
+                <div>
+                    <h2>Email</h2>
+                    <input name ="email" type="email"/>
+                </div>
+                <hr>
+                <div>
+                    <h2>Contraseña</h2>
+                    <input name ="password" type="password"/>
+                </div>
+                <hr>
+                <div>
+                    <h2>Fecha de nacimiento</h2>
+                    <input name ="birthdate" type="date"/>
+                </div>
+                <hr>
+                <div>
+                    <h2>Color favorito</h2>
+                    <input name ="favorite_color" type="color"/>
+                </div>
+                <hr>
+                <div>
+                    <h2>Nivel de programación</h2>
+                    <input name ="programming_level" type="range" min=0 max=100 step=2/>
+                </div>
+                <hr>
+                <div>
+                    <h2>Sexo</h2>
+                    <input checked id="sexom" name ="sex" type="radio"/>
+                    <label for="sexom">Masculino</label>
+                    <input id="sexof" name ="sex" type="radio"/>
+                    <label for="sexof">Femenino</label>
+                </div>
+                <hr>
+                <div>
+                    <h2>Deportes</h2>
+                    <input id="tenis" name ="sports" type="checkbox"/>
+                    <label for="tenis">Tenis</label>
+                    <input id="futbol" name ="sports" type="checkbox"/>
+                    <label for="futbol">Fútbol</label>
+                    <input id="voley" name ="sports" type="checkbox"/>
+                    <label for="voley">Voley</label>
+                </div>
+                <hr>               
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+/*Limpiando el margen y el pading a todos los elemetos*/
+/*
+* {
+    padding: 0;  
+    margin: 0;
+}
+*/
+
+/*Comenzar con los selectores globales*/
+body {
+    color: #fff;
+    font-size: 15px;
+    font-family: arial;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+header {
+    background: #00AAB5;
+}
+header a {
+    color: red;
+}
+
+header .header-logo {
+    font-size: 64px;
+    margin-bottom: 20px;
+    display: block;
+
+}
+
+header .enlaces {
+    flex: auto;
+}

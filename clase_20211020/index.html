@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIA QUERIES: RESPONSIVE WEB DESIGN</title>
+    <style>
+        /*ESTÁNDAR CSS QUE SE EJECUTARÁ EN CUALQUIER DIMENSIÓN*/
+        div {
+            background: red;
+            max-width: 1280px;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 42px;
+        }
+
+        div header {
+            background: yellow;
+        }
+
+        div footer {
+            background: yellow;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex div {
+            width: 50%;
+            background: white;
+            border: 2px solid red;
+        }
+
+        @media (min-width: 1081px) {
+            div {
+                background: pink;
+            }
+        }
+
+        @media (min-width: 721px) and (max-width: 1080px) {
+            div {
+                background: blueviolet;
+                max-width: 980px;
+                font-size: 36px;
+            }
+
+            .flex div {
+                width: 100%;
+            }
+
+            .div header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 421px) and (max-width: 720px) {
+            div {
+                background: blue;
+                max-width: 620px;
+                font-size: 30px;
+            }           
+        }
+
+        @media (min-width: 321px) and (max-width: 420px) {
+            div {
+                background: green;
+                max-width: 320px;
+                font-size: 26px;
+            }           
+        }
+        
+        @media (min-width: 0px) and (max-width: 320px) {
+            div {
+                background: greenyellow;
+                max-width: 220px;
+                font-size: 20px;
+            }           
+        }
+
+        @media (orientation: landscape) {
+            div {
+                color: goldenrod;
+            }
+        }
+
+        @media (orientation: portrait) {
+            div {
+                color: gray;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <header>
+            HEADER
+        </header>
+        <main>
+            <div class="flex">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
+            </div>
+        </main>
+        <footer>
+            FOOTER
+        </footer>
+    </div>
+</body>
+</html>

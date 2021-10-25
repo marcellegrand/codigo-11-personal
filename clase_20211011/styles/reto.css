@@ -1,0 +1,90 @@
+/*GENERAL SELECTORS*/
+p {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/*CLASS SELECTORS*/
+.div_container {
+    font-family: Arial;
+    color: black;
+    text-align: center;  
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px 0px;
+    
+    position: relative;
+    width: 650px;
+    height: 2255px;
+    
+    background: #FFFFFF;    
+}
+
+.div_top {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;  
+    text-align: center;     
+}
+
+.div_bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;       
+}
+
+.div_content {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.div_left {
+    padding-left: 20px;
+    padding-right: 20px;    
+}
+
+.div_right {
+    padding-left: 20px;
+    padding-right: 20px;    
+}
+
+.img_top {
+    position: relative;
+    border-radius: 10px;
+    width: 504px;
+    height: 360px;
+}
+
+.img_content {
+    position: relative;
+    border-radius: 10px;
+    width: 260px;
+    height: 260px;
+}
+
+.btn_mailing {
+    position: relative;
+    border-radius: 10px;
+    background: none;
+    border-style: solid;
+    width: 150px;
+    height: 32px;
+    
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.lst_icon {
+    list-style-type: none;
+    display: flex;
+    justify-content: stretch;
+}

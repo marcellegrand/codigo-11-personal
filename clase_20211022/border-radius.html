@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius</title>
+    <style>
+        body {
+            text-align: center;
+            height: 100vh;
+        }
+
+        div.radius {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 56px 0px 56px 0px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*
+            ::after y ::before
+            Crea un pseudo-elemento que es el último hijo del elemento seleccionado. Es comúnmente usado para añadir contenido cosmético a un elemento con la propiedad content. Es en línea (inline) de forma predeterminada.
+
+            Los pseudo-elementos generados por ::before y ::after son contenidos por la caja de formato del elemento, y por lo tanto no aplica a elementos reemplazados como los elementos <img> o <br>            
+        */
+        div.flex:hover div.radius::after {
+            border-radius: 0 20px 0 20px;
+        }        
+        
+        div.radius::after {
+            content: '';
+            width: 25%;
+            height: 25%;
+            background: white;
+            position: absolute;
+            border-radius: 20px 0 20px 0;
+        }
+
+        .flex {
+            display: inline-flex;
+            background: blue;
+            /* offset-x | offset-y | blur-radius | spread-radius | color */
+            box-shadow: 10px 10px 1px green, 20px 20px 2px yellow;
+        }
+
+        h1 {
+            /* offset-x | offset-y | blur-radius | color */
+            text-shadow: 2px 2px 1px blue;
+        }
+
+        .lineal {
+            background: linear-gradient(45deg, red, blue);
+        }
+
+        .radial {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 100%;
+            background: radial-gradient(circle at center, red 0, blue, green 100%);
+        }
+
+        .transition {
+            text-shadow: 2px 2px 1px blue, 4px 4px 1px red;
+            transition-property: text-shadow;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+        }
+
+        .transition:hover {
+            text-shadow: 0px 0px 0px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <div class="radius">
+        </div>
+        <div class="radius">
+        </div>      
+    </div>  
+    <br>
+    <br>
+    <h1>Text Shadow</h1> 
+    <h2 class="lineal">DEGRADADO LINEAL</h2>
+    <h2 class="radial"></h2> 
+    <h2 class="transition">TRANSITION</h2> 
+</body>
+</html>
