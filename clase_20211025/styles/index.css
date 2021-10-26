@@ -3,10 +3,93 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #F29D09;
+  color: #A109F2;
 }
 
-div {
-  color: #db1;
+.container {
+  height: 100vm;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.success {
+  background-color: #57F209;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+}
+
+.warning {
+  background-color: #F2CB09;
+  padding: 12px;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+}
+
+.error {
+  background-color: #F2093E;
+  padding: 14px;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+}
+
+.info {
+  background-color: #09F2E7;
+  padding: 16px;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+}
+
+header:hover {
+  background: blue;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:hover {
+  background: brown;
+}
+
+header ul {
+  padding: 20px;
+}
+
+header > li {
+  color: red;
+}
+
+header .nombre-clase {
+  color: pink;
+}
+
+header ul li {
+  background: blueviolet;
+  margin-right: 20px;
+}
+
+header ul li:last-child {
+  margin-right: 0;
+}
+
+header ul li:first-child {
+  margin-left: 20px;
+}
+
+header ul li:hover {
+  background: green;
 }
 /*# sourceMappingURL=index.css.map */
