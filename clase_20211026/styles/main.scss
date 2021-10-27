@@ -1,0 +1,110 @@
+/*EXTENSIONES*/
+%boxSpecial {
+    padding: 20px;
+    background: turquoise;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+%fontPeculiar {
+    font-family: Verdana, Tahoma;
+    font-size: 16px;
+    color: red;
+}
+
+header {
+    @extend %boxSpecial;
+    @extend %fontPeculiar;
+}
+
+main {
+    @extend %boxSpecial;
+    @extend %fontPeculiar;
+}
+
+footer {
+    @extend %boxSpecial;
+    @extend %fontPeculiar;
+}
+
+/*INTERPOLACIONES*/
+$url-base: 'https://www.larepublica.pe';
+
+div {
+    background: url('#{$url-base}/mi-imagen-ejemplo.png');
+}
+
+/*MIXINGS*/
+$font-size-h1: 35px;
+$font-size-h2: 28px;
+$font-size-h3: 21px;
+$font-size-h4: 14px;
+$font-size-base: 10px;
+
+@mixin font-size-title($tag-title) {
+    @if ($tag-title == h1) {
+        font-size: $font-size-h1;
+    } @else if ($tag-title == h2) {
+        font-size: $font-size-h2;
+    } @else if ($tag-title == h3) {
+        font-size: $font-size-h3;
+    } @else if ($tag-title == h4) {
+        font-size: $font-size-h4;
+    } @else {
+        font-size: $font-size-base;
+    }
+}
+
+h1 {
+    @include font-size-title(h1);
+}
+
+h2 {
+    @include font-size-title(h2);
+}
+
+h3 {
+    @include font-size-title(h3);
+}
+
+/*COLECTIONS*/
+$spaces: 4px, 8px, 12px, 20px, 24px;
+$colors: red, orange, yellow, blue, violet, turquoise; 
+
+@each $space in $spaces {
+    .space-n-#{$space} {
+        margin: $space; 
+    }
+}
+
+@each $color in $colors {
+    .color-#{$color} {
+        color: $color;
+    }
+}
+
+/*MAPS*/
+$color-branding: (
+    primary: blue,
+    secondary: brown,
+    terciary: gray
+);
+
+$color-semantic: (
+    error: red,
+    warning: yellow,
+    success: green,
+    info: turquoise
+);
+
+@each $key, $value in $color-branding {
+    .color-#{$key} {
+        color: $value;
+    }
+}
+
+.sample-maps {
+    color: map-get($color-branding, primary);
+}

@@ -1,0 +1,96 @@
+/*EXTENSIONES*/
+header, main, footer {
+  padding: 20px;
+  background: turquoise;
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
+header, main, footer {
+  font-family: Verdana, Tahoma;
+  font-size: 16px;
+  color: red;
+}
+
+/*INTERPOLACIONES*/
+div {
+  background: url("https://www.larepublica.pe/mi-imagen-ejemplo.png");
+}
+
+/*MIXINGS*/
+h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+/*COLECTIONS*/
+.space-n-4px {
+  margin: 4px;
+}
+
+.space-n-8px {
+  margin: 8px;
+}
+
+.space-n-12px {
+  margin: 12px;
+}
+
+.space-n-20px {
+  margin: 20px;
+}
+
+.space-n-24px {
+  margin: 24px;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-orange {
+  color: orange;
+}
+
+.color-yellow {
+  color: yellow;
+}
+
+.color-blue {
+  color: blue;
+}
+
+.color-violet {
+  color: violet;
+}
+
+.color-turquoise {
+  color: turquoise;
+}
+
+/*MAPS*/
+.color-primary {
+  color: blue;
+}
+
+.color-secondary {
+  color: brown;
+}
+
+.color-terciary {
+  color: gray;
+}
+
+.sample-maps {
+  color: blue;
+}
+/*# sourceMappingURL=main.css.map */
