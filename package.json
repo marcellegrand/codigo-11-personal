@@ -1,0 +1,23 @@
+{
+  "name": "codigo-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcellegrand/codigo-11-personal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcellegrand/codigo-11-personal/issues"
+  },
+  "homepage": "https://github.com/marcellegrand/codigo-11-personal#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
