@@ -28,4 +28,28 @@ function theBar() {
     }
 }
 
-theBar();
+//theBar();
+
+function saveName(nombre) {
+    let mensaje = '';
+
+    try {
+        if (nombre.length < 6) throw 'ERROR_SHORT';
+        if (nombre.length > 12) throw 'ERROR_LONG';
+
+        mensaje = `El nombre ${nombre} es correcto, cumple las condiciones`;
+    } catch (err) {
+        if (err == 'ERROR_SHORT') {
+            mensaje = `El nombre ${nombre} es CORTO`;
+        };
+        if (err == 'ERROR_LONG') {
+            mensaje = `El nombre ${nombre} es LARGO`;
+        };
+    } finally {
+        console.log('Nombre evaluado: ',mensaje);
+    }
+}
+
+saveName('Marcel');
+saveName('Marifersolange');
+saveName('Ana');
