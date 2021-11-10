@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS</title>
+    <style>
+        img {
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button id = "btnSaludar">SALUDAR</button>
+    <script>
+        const obj_btnSaludar = document.getElementById('btnSaludar');
+        obj_btnSaludar.addEventListener('click',function() {
+            alert('Hello, World!');
+        });
+    </script>
+
+    <button id = "btnShowHide">HIDE</button>
+    </br>
+    <img src="./images/djokovic.jpg">
+    <script>
+        const obj_btnShowHide = document.getElementById('btnShowHide');
+        const tag_img = document.querySelector('img');
+        obj_btnShowHide.addEventListener('click',function() {
+            if (obj_btnShowHide.textContent == 'HIDE') {
+                 tag_img.style.display = 'none';
+                 obj_btnShowHide.textContent = 'SHOW';
+            } else {
+                tag_img.style.display = 'block';
+                 obj_btnShowHide.textContent = 'HIDE';
+            };
+        });
+    </script>
+</body>
+</html>
