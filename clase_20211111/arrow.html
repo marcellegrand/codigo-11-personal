@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROW FUNCTION</title>
+</head>
+<body>
+    <script>
+        function fn(a,b) {
+            return (a + b);
+        }
+
+        const fnArrow = (a,b) => a + b;
+
+        console.log(fn(5,3));
+        console.log(fnArrow(5,3));
+
+        //Parámetros por defecto
+        function persona(name = 'Marcel', lastname = 'Lazo de la Vega', age = 43) {
+            return `${name} ${lastname} ${age}`;
+        }
+        console.log(persona());
+
+        //Parámetros restantes
+        function suma(a, b, ...c) {
+            let nResultado = a + b;
+
+            c.forEach((n) => {
+                nResultado = nResultado + n;
+            });
+
+            return nResultado;
+        }
+        console.log(suma(1,2,3,4,5,6,7,8,9,10));
+
+        //Operador spread
+        const datos = ["hi", "how", "are", "you"];
+        console.log(...datos);
+        console.log(datos[0], datos[1], datos[2], datos[3]);
+
+        function limpiarEspacios(...cadenas) {
+            for (let i = 0; i < cadenas.length; i++) {
+                cadenas[i] = cadenas[i].trim();
+            }
+            return cadenas;
+        }
+
+        const CadenasConEspacios = ['  Hola     ', '    mundo      ', '   por    ', '   siempre  '];
+        let CadenasSinEspacios = limpiarEspacios(...CadenasConEspacios);
+        console.log(CadenasSinEspacios); 
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLONAR ELEMENTOS</title>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    <div>
+    <script>
+        const c_div = document.querySelector('div');
+        //Agregando una función el evento onclick
+        c_div.onclik = function( ) {
+            alert('Testing click...');
+        }
+
+        //Clonando el elemento
+        const c_clone_true = c_div.cloneNode(true); //Clona con contenido y estructura interna
+        const c_clone_false = c_div.cloneNode(false); //Clona solo el esqueleto del elemento
+        
+        document.querySelector('body').appendChild(c_clone_true);
+        document.querySelector('body').appendChild(c_clone_false);
+    </script>    
+</body>
+</html>

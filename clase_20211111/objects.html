@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECTS</title>
+</head>
+<body>
+    <script>
+        //Por valor
+        let valorUno = 'Marcel';
+        let valorDos = valorUno;
+        valorUno = 'Chio';
+
+        console.log('valorUno',valorUno);
+        console.log('valorDos',valorDos);
+
+        let objOriginal = {
+            name: 'Marcel'
+        };
+
+        let objCopia1 = objOriginal;
+        objOriginal.name = 'Chio';
+
+        console.log(objOriginal.name);
+        console.log(objCopia1.name);
+
+        //Copia del objeto completa: Object Assign
+        let objCopia2 = Object.assign({},objOriginal);
+        objCopia2.name = 'Marcel';
+        console.log(objCopia2.name);
+
+        //Copia del objeto completa: Operador SPREAD
+        let objCopia3 = {...objOriginal};
+        objCopia3.name = 'Antonio';
+        console.log(objCopia3.name);
+
+        //Destructuring OBJECTS
+        const objSample = {
+            name: 'Chio',
+            lastname: 'Vizcarra',
+            age: 39,
+            address: {
+                street: 'Calle San Martín',
+                number: 879,
+                district: 'Miraflores' 
+            }
+        }
+        console.log(objSample.name);
+        console.log(objSample.lastname);
+        console.log(objSample.age);
+        console.log(objSample.address.street);
+        console.log(objSample.address.number);
+        console.log(objSample.address.district);
+
+        //Destructuring OBJECTS:
+        /*
+            Creando variables que eviten manipular directamente
+            las propiedades de los objetos. Estas son copias por valor
+        */
+        let {
+            name,
+            lastname,
+            age,
+            address: {
+                street,
+                number,
+                district
+            }
+        } = objSample;
+
+        console.log(name);
+        console.log(lastname);
+        console.log(age);
+        console.log(street);
+        console.log(number);
+        console.log(district);
+       
+</script>
+
+</body>
+</html>

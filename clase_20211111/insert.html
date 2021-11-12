@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSERCIONES</title>
+</head>
+<body>
+    <button id = "btn_before">INSERT BEFORE</button>
+    <button id = "btn_after">INSERT AFTER</button>
+
+    <div class = "container">
+        <h2>TITULO 2 YA EXISTENTE</h2>
+    </div>
+
+    <script>
+        const c_h1 = document.createElement('h1');
+        c_h1.innerHTML = '<span>TITULO 1 NUEVO INSERTADO</span>';
+        const c_h2 = document.querySelector('h2');
+        const c_container = document.querySelector('.container');
+        
+        const c_button_before = document.getElementById('btn_before');
+        const c_button_after = document.getElementById('btn_after');
+
+        c_button_before.addEventListener('click', function() {
+            c_container.insertBefore(c_h1,c_h2);
+        });
+        c_button_after.addEventListener('click', function() {
+            c_container.insertBefore(c_h1,c_h2.nextSibling);
+        });
+</script>
+
+
+</body>
+</html>

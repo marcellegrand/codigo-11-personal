@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM: RemoveChild</title>
+</head>
+<body>
+    <button>REEMPLAZAR</button>
+    <div class = "main_container">
+        <h2>HOLA, MUNDO... PREDETERMINADO</h2>
+    </div>
+    <script>
+        const c_h1 = document.createElement('h1');
+        c_h1.innerHTML = "<span>HOLA, MUNDO... REEMPLAZADO</span>"
+        
+        const c_container = document.querySelector('.main_container');
+        const c_button = document.querySelector('button');
+        const c_h2 = document.querySelector('h2');
+
+        c_button.addEventListener('click', function() {
+            c_container.replaceChild(c_h1, c_h2);
+        });
+    </script>
+</body>
+</html>
