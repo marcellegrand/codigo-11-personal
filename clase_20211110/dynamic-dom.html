@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DINAMICO</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: arial;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            transition: all 0.5s ease;
+            border-radius: 8px;
+            border: 1px solid #cacaca;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 3px #dadada;
+        }
+
+        input:focus:required {
+            border-color: red;
+        }
+
+        div {
+            padding: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: 1px solid green;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>FORMULARIO</h1>
+    <form>
+        <div>
+            <input class = "js_name" type = "text" placeholder = "Nombre" required>
+        </div>
+        <div>
+            <input class = "js_lastname" type = "text" placeholder = "Apellido" required>
+        </div>
+        <div>
+            <input class = "js_age" type = "number" placeholder = "Edad" required>
+        </div>
+        <div>
+            <input class = "js_urlphoto" type = "text" placeholder = "Foto (URL)" required>
+        </div>
+        <div>
+            <button>ENVIAR</button>
+        </div>
+    </form>
+    <script>
+        const inputName = document.querySelector('.js_name');
+        const inputLastName = document.querySelector('.js_lastname');
+        const inputAge = document.querySelector('.js_age');
+        const inputURLPhoto = document.querySelector('.js_urlphoto');
+        const formFormulario = document.querySelector('form');
+
+        formFormulario.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const article = document.createElement('article');
+            article.innerHTML = `
+                <h2>Nombre completo: ${inputName.value} ${inputLastName.value}</h2>
+                <h2>Edad: ${inputAge.value}</h2>
+                <figure>
+                    <img src="${inputURLPhoto.value}" alt="${inputName.value} ${inputLastName.value}"/>
+                </figure>
+                <button>ELIMINAR</button>
+            `
+
+            article.querySelector('button').onclick = function() {
+                article.remove();
+            }
+        });
+    </script>
+</body>
+</html>

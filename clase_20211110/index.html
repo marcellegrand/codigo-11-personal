@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSLIST: JS</title>
+    <style>
+        .d-hide {
+            display: none
+        }
+        
+        .format-title {
+            background: red;
+            color: orange;
+            padding: 20px;
+        }
+
+        .button-active {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>TITULO PRINCIPAL</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, consectetur. Neque, nobis aspernatur! Fugit eum, unde consectetur ipsum reprehenderit porro explicabo eaque facilis quaerat alias labore quam quasi dolorem provident.
+    </p>
+    <button>UNPRESSED</button>
+    <script>
+        const h1 = document.querySelector('h1');
+        const p = document.querySelector('p');
+        const button = document.querySelector('button');
+
+        button.addEventListener('click', function() {
+            if (this.textContent == 'PRESSED') {
+                this.textContent = 'UNPRESSED';
+            } else {
+                this.textContent = 'PRESSED';
+            }
+
+            h1.classList.toggle('format-title');
+            this.classList.toggle('button-active');
+        });
+    </script>
+</body>
+</html>
