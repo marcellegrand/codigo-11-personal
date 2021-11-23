@@ -1,0 +1,22 @@
+{
+  "alumnos": [
+    {
+      "id": 1,
+      "name": "Marcel",
+      "lastname": "Lazo de la Vega",
+      "age": "43"
+    },
+    {
+      "id": 2,
+      "name": "Rocío",
+      "lastname": "Vizcarra",
+      "age": "40"
+    },
+    {
+      "name": "Jorge",
+      "lastname": "Merino",
+      "age": "23",
+      "id": 3
+    }
+  ]
+}
