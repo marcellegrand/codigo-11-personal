@@ -1,0 +1,13 @@
+.cart {
+    position: relative;
+}
+
+.cart__image {
+    width: 25px;
+    height: 25px;;
+}
+
+.cart__quantity {
+    position: absolute;
+    border-radius: 100%;
+}
